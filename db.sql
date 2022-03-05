@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS p7_project;
+CREATE DATABASE p7_project;
+USE p7_project;
