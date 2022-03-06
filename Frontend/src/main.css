@@ -191,4 +191,57 @@
   width: 46px;
   height: 46px;
   }
+  .panel {
+    box-shadow: 0 2px 0 rgba(0,0,0,0.075);
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 15px;
+    }
+    
+    .panel .panel-footer, .panel>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    }
+    
+    .panel .panel-heading, .panel>:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+    
+    .panel-body {
+    padding: 25px 20px;
+    }
+    
+       
+    .invalidBox {
+      background: #ad2c9c;
+      background: -webkit-radial-gradient(center, #e42ddb, #cf2095);
+      background: -moz-radial-gradient(center, #cf2080, #ca19bb);
+      background: radial-gradient(ellipse at center, #cf2080, #cf2080);
+      color: white;   
+      font-weight: bold;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 2px 2px black, -2px 2px black ;
+    };
+   
+    .card {
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);
+    }
+    
+    .card {
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 1px solid #e5e9f2;
+      border-radius: .2rem;
+    }
   
