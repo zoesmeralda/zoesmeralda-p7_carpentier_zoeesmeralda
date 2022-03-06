@@ -1,5 +1,6 @@
 
-<template><header class="container">
+<template>
+<header class="container">
         <div class="row justify-content-center">
             <nav class="col-1 m-auto">
     

@@ -131,7 +131,7 @@ export default {
                 .then((res)=> console.log(res))
                 .catch((error) => { 
                     location.reload();
-                   console.log("1")})
+                   console.log("1"+ error)})
             } else {
                 return
             }
