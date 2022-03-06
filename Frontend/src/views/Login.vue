@@ -13,13 +13,13 @@
                 <label for="inputPassword" >Password</label>
                 <input v-on:keydown="isInvalid = false" v-model="inputPassword"  type="password" class="form-control form-control-lg" />
             </div>
-<button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
+<button type="submit" class="btn btn-dark btn-lg btn-block">Se Connecter</button>
 
            <router-link to="/Profile"> Mon profil </router-link>
             </form>
       
         <div class=' col-7 mx-auto mt-3'>
-            <router-link to="/Signup"><button type="submit" class="btn btn-dark btn-lg btn-block">Sign up</button></router-link>
+            <router-link to="/Signup"><button type="submit" class="btn btn-dark btn-lg btn-block">S'inscrire</button></router-link>
         </div>
     </div>
 </template>
