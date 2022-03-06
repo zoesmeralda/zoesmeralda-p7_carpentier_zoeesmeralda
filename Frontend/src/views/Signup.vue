@@ -7,7 +7,7 @@
             
             
             <div class="form-group">
-                 <label for="inputName">Username:</label>
+                 <label for="inputName">Nom d'utilisateur</label>
                 <input v-on:keydown="isInvalid = false" v-model="inputUserName" type="text" id="inputUserName" class="form-control form-control-lg" />
             </div>
 
@@ -22,7 +22,7 @@
             </div>
 
 <button type="submit" class="btn btn-dark btn-lg btn-block">Créer un compte</button>
-           <router-link to="/Login"> Se Connecter </router-link>
+           
                     <small id="passwordHelp" class="form-text text-muted">de 8 a 15 caractères dont au moins 1 lettre et 1 chiffre</small>
                                          
             </form>
