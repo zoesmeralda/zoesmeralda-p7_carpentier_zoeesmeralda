@@ -279,4 +279,28 @@
         box-shadow: 2px 2px 2px black;
         padding: .5rem;
         }
+        @media only screen and (max-width: 768px) {
+            #membre {
+            display: none;
+            }
+            #filPrincipal {
+            display: flex;
+            flex-direction: column;
+            }
+            .messImage {
+            width: 100%;
+            }
+            .panelComment {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            }
+            .buttonsPanel {
+            width: 100%;
+            }
+            .titreResponsive {
+            font-size:3rem;
+            }
+            }
   
