@@ -63,14 +63,14 @@ export default {
                     password    : this.inputPassword
                 })
                 .then(() => {
-                    alert('inscription réussie, redirection vers le module de connexion');
+                    alert('inscription réussie!');
                     router.push({ path : '/'});
                 })
                 .catch((error)=>{
                     alert(error.status)
                     console.log(error)});
             } else {
-                console.log('validation form, method sendForm, renvoie une erreur')
+                console.log('validation form')
                 this.invalid = true;
             }
         }
