@@ -1,6 +1,6 @@
 <template>
     <main class="container">
-         <!-- un seul bloc contenant le module d'inscription -->
+         
         <section >
             <form @submit.prevent="sendForm(event)">
                
@@ -23,7 +23,7 @@
 
 <button type="submit" class="btn btn-dark btn-lg btn-block">Créer un compte</button>
            <router-link to="/Login"> Login </router-link>
-                    <small id="passwordHelp" class="form-text text-muted">de 8 a 15 caracteres dont au moins 1 lettre et 1 chiffre</small>
+                    <small id="passwordHelp" class="form-text text-muted">de 8 a 15 caractères dont au moins 1 lettre et 1 chiffre</small>
                                          
             </form>
         </section>  
