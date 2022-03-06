@@ -18,9 +18,6 @@
            <router-link to="/Profile"> Mon profil </router-link>
             </form>
       
-        <div v-show="isInvalid" class="invalidBox m-3" key="invalid">
-            Veuillez vérifier vos informations de connexion.
-        </div>  
         <div class=' col-7 mx-auto mt-3'>
             <router-link to="/Signup"><button type="submit" class="btn btn-dark btn-lg btn-block">Sign up</button></router-link>
         </div>
