@@ -53,7 +53,7 @@ export default {
                 localStorage.setItem("userId",  res.data.userId)
                 localStorage.setItem("userName",res.data.userName)
                 localStorage.setItem("role",    res.data.role)
-                window.alert('connexion réussie, redirection vers la page principale');
+                window.alert('connexion réussie!');
                 router.push({ path : 'Feed'});
             })
             .catch((error) => {
