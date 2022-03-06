@@ -23,7 +23,7 @@
                             </div>
                             <div>
                                 <div v-if="isAdmin">
-                                    <router-link to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">VOUS ÊTES L'ADMINISTRATEUR</button></router-link> 
+                                    <router-link to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">VOUS ÊTES ADMINISTRATEUR</button></router-link> 
                                     <router-link to='/Admin'><button  type="button"   class=" btn btn-danger mx-auto m-3 rounded p-2 buttonsPanel"><button class=" rounded p-1 m-1 "> ACTIVÉE</button></button></router-link> 
                                 </div>
                             </div>

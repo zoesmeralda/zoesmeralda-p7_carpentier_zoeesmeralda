@@ -23,10 +23,10 @@ exports.createMessage = (req, res, next) => {
     message.save()
         .then(() => res.status(201).json({ message: "Publication réussie" }))
         .catch(error => res.status(400).json({ error }))
-//}
+
 };
 
-// READ
+
 
 exports.findAllMessages = (req, res, next) => {
     Message.findAll({

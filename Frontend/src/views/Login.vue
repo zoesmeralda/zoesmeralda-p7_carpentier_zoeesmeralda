@@ -1,7 +1,7 @@
 <template>
    <div class="vue-tempalte">
        
-            <form @submit.prevent="handleSubmit">
+            <form @submit.prevent="Submit">
                 <h3>Sign In</h3>
 
             <div class="form-group">
@@ -42,7 +42,7 @@ export default {
         }
     },
     methods: {
-        handleSubmit() {
+        Submit() {
 
             if ( !this.inputEmail || !this.inputPassword ) {
                     return this.isInvalid = true;
