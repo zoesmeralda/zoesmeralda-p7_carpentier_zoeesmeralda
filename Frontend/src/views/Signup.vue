@@ -22,7 +22,7 @@
             </div>
 
 <button type="submit" class="btn btn-dark btn-lg btn-block">Créer un compte</button>
-           <router-link to="/Login"> Login </router-link>
+           <router-link to="/Login"> Se Connecter </router-link>
                     <small id="passwordHelp" class="form-text text-muted">de 8 a 15 caractères dont au moins 1 lettre et 1 chiffre</small>
                                          
             </form>
