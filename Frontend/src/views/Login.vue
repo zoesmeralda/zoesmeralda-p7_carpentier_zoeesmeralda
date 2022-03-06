@@ -15,7 +15,6 @@
             </div>
 <button type="submit" class="btn btn-dark btn-lg btn-block">Se Connecter</button>
 
-           <router-link to="/Profile"> Mon profil </router-link>
             </form>
       
         <div class=' col-7 mx-auto mt-3'>
