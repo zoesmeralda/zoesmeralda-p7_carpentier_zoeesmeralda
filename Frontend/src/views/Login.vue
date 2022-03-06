@@ -2,7 +2,7 @@
    <div class="vue-tempalte">
        
             <form @submit.prevent="Submit">
-                <h3>Sign In</h3>
+            
 
             <div class="form-group">
                  <label for="inputEmail">Email:</label>
