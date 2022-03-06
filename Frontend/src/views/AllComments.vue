@@ -12,8 +12,8 @@
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <p class="m-1"> Bonjour {{ nameCurrentUser }} ! </p>
-                                <button @click="localClear"> Se déconnecter </button>
+                                <p > Bonjour {{ nameCurrentUser }} ! </p>
+                                <button class="btn btn-dark btn-lg btn-block" @click="localClear"> Se déconnecter </button>
                             </div>
                         </div>
                         <div class="card-body text-center">
@@ -32,7 +32,7 @@
                     <h2 class="text-black text-center m-5 ">
                         Posts
                     </h2>
-                    <div class="badge btn-primary p-3 badgeList">
+                    <div class="badge btn-primary p-3 badgeList" >
                             <span class="spanBadge">Date</span>  
                             <span class="spanBadge">User</span>
                             <span class="spanBadge">Post</span> 

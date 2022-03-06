@@ -14,7 +14,7 @@
                         <div class="card-header">
                             <div class="row justify-content-around">
                                 <div class="m-1"> Bienvenue {{ nameCurrentUser }} ! </div>
-                                <button @click="localClear">Se déconnecter </button>
+                                <button class="btn btn-dark btn-lg btn-block"  @click="localClear">Se déconnecter </button>
                             </div>
                         </div>
                         <div class="card-body text-center">
