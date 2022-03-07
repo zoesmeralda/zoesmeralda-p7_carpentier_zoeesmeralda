@@ -20,9 +20,7 @@
                             <div class="dropdown text-center">
                                 <p>Membre depuis le {{ creation }}</p>
                             </div>
-                            <div>
-                                <router-link v-if="isAdmin" to='/Admin'><button  type="button" class=" btn btn-danger mx-auto rounded p-2 buttonsPanel">ADMIN. <button class=" rounded p-1 m-1 ">ACTIVÉE</button></button></router-link> 
-                            </div>
+                            
                         </div>
                        
                     </article> 

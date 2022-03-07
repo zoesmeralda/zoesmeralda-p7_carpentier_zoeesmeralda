@@ -21,8 +21,8 @@
                                 <p>Membre depuis le {{ creation }}</p>
                             </div>
                             <div>
-                                <router-link v-if="isAdmin" to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">ADMINISTRATION</button></router-link> 
-                                <router-link v-if="isAdmin" to='/Admin'><button  type="button"   class=" btn btn-danger mx-auto m-3 rounded p-2 buttonsPanel"><button class=" rounded p-1 m-1 "> ACTIVÉE</button></button></router-link> 
+                                <router-link v-if="isAdmin" to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">ADMINISTRATEUR</button></router-link> 
+                                
                             </div>
                         </div>
                     </div> 
