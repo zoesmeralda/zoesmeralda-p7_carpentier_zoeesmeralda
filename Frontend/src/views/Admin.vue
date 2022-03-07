@@ -59,7 +59,7 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameCurentUser: "",
+            nameCurrentUser: "",
             creation: ""
         }
     },

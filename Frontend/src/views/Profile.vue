@@ -20,7 +20,8 @@
         <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
           <h4 class="font-weight-bold my-4">Bienvenue {{ nameCurrentUser }} !</h4>
 <button @click="localClear"> Se déconnecter </button>
- <router-link to="/Admin"> <button class="btn btn-dark btn-lg btn-block"> Espace Administrateur </button></router-link>
+
+ <router-link to="/Admin"> <button v-if="isAdmin" class="btn btn-dark btn-lg btn-block"> Espace Administrateur </button></router-link>
           <div class="opacity-75 mb-4">
             Membre depuis le {{ creation }}
           </div>
