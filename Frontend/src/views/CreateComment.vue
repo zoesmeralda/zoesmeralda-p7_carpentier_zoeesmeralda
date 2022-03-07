@@ -1,6 +1,6 @@
 <template>
     <main class="container">
-         
+         <router-link to="/Feed"> <button class="btn btn-dark btn-lg btn-block">Retour au Fil d'actualité </button></router-link>
         <section class="row card bg-light m-5 p-3">
             <form enctype="multipart/form-data">
              
