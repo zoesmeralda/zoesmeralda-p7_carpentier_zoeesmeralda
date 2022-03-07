@@ -12,7 +12,7 @@
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <p > Bonjour {{ nameCurrentUser }} ! </p>
+                                <p > Bonjour {{ nameUser }} ! </p>
                                 <button class="btn btn-dark btn-lg btn-block" @click="localClear"> Se déconnecter </button>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ export default {
         return {
             isAdmin: false,
             messages: [],
-            nameCurrentUser: "",
+            nameUser: "",
             creation: ""
         }
     },

@@ -11,7 +11,7 @@
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row justify-content-around">
-                            <p class="text-center p-2"> Hey  {{ nameCurrentUser }} ! </p>
+                            <p class="text-center p-2"> Hey  {{ nameUser }} ! </p>
                             <button @click="localClear"> Se déconnecter </button>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ export default {
             message: "",
             messageId: "",
             messageUrl: "",
-            nameCurrentUser: "",
+            nameUser: "",
             currentUserId: "",
             creationUser: ""
         }

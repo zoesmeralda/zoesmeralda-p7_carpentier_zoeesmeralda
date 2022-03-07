@@ -12,7 +12,7 @@
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <p class="m-1"> Bonjour {{ nameCurrentUser }} ! </p>
+                                <p class="m-1"> Bonjour {{ nameUser }} ! </p>
                                 <button @click="localClear"> Se déconnecter </button>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
               
                 <sub class="col col-md-8">
                     <h2 class="text-white text-center m-5 ">
-                       TOUS LES UTILISATEURS
+                       UTILISATEURS
                     </h2>
                     <div class="badge btn-primary p-3 badgeList">
                         <span class="spanBadge">Nom</span>  
@@ -66,7 +66,7 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameCurrentUser: "",
+            nameUser: "",
             creation: "",
             users: []
         }

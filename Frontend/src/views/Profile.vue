@@ -18,7 +18,7 @@
        
 
         <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
-          <h4 class="font-weight-bold my-4">Bienvenue {{ nameCurrentUser }} !</h4>
+          <h4 class="font-weight-bold my-4">Bienvenue {{ nameUser }} !</h4>
 <button @click="localClear"> Se déconnecter </button>
 
           <div class="opacity-75 mb-4">
@@ -62,7 +62,7 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameCurrentUser: "",
+            nameUser: "",
             creation: "",
             id: ""
         }
