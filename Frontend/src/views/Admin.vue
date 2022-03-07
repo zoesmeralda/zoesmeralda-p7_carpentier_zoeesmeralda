@@ -13,7 +13,7 @@
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <div class="m-1"> Bienvenue {{ nameUser }} ! </div>
+                                <div class="m-1"> Bienvenue {{ nameCurrentUser }} ! </div>
                                 <button class="btn btn-dark btn-lg btn-block"  @click="localClear">Se déconnecter </button>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameUser: "",
+            nameCurentUser: "",
             creation: ""
         }
     },
