@@ -19,7 +19,7 @@
                                 <p id="membre">Membre depuis le {{ creation }}</p>
                             </div>
                             <div id="compteButton" class="text-center">
-                                <router-link v-if="isAdmin" to='/Admin'><button type="button" class=" btn btn-danger mx-auto rounded p-2 buttonsPanel">ADMIN. <button class=" rounded p-1 m-1 "> ACTIVÉE</button></button></router-link> 
+                                <router-link v-if="isAdmin" to='/Admin'><button type="button" class="btn btn-dark btn-lg btn-block ">ADMINISTRATEUR</button></router-link> 
                                 <router-link v-else to='/Profile'><button type="button" class=" btn btn-secondary mx-auto rounded p-2 buttonsPanel">PROFIL</button></router-link> 
                             </div>
                         </div>

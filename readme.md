@@ -5,4 +5,4 @@ Compte admin email : zoz78@hotmail.fr
 Mot de passe : groupomania1
 
 Compte utilisateur : miklar@gmail.com
-Mot de passe :groupomania2
+Mot de passe :azertyuiop1
