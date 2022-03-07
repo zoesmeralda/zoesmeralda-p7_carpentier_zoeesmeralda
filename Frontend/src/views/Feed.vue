@@ -36,7 +36,7 @@
                                 le {{ message.createdAt.slice(0,10).split('-').reverse().join('.') + ' à ' + message.createdAt.slice(11,16) }}
                             </span>
                             <div class="badge bg-dark text-wrap text-white p-2" style="width: 6rem;">
-                                ref # {{ message.id }}                    
+                                publication # {{ message.id }}                    
                             </div>                                                                                       
                         </div>
                         <div class="btn" @click="commentPage(message.id)">
