@@ -21,12 +21,11 @@
                             <div class="dropdown text-center">
                                 <p>Membre depuis le {{ creation }}</p>
                             </div>
-                            <div>
-                                <div v-if="isAdmin">
-                                    <router-link to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">ADMINISTRATEUR</button></router-link> 
+                            
+                        
                                      
-                                </div>
-                            </div>
+                                
+                            
                         </div>
                         
                     </article> 
