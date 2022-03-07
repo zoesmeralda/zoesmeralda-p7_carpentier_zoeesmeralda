@@ -35,7 +35,7 @@
                 <article class="col col-md-8 mt-5">
                     
                     <div class="row justify-content-around">
-                        <button @click="toAllComments()" class="btn btn-dark btn-lg btn-block">POSTS/COMMENTS</button>
+                       
                         <button @click="toAllUsers()" class="btn btn-dark btn-lg btn-block" >USERS</button>
                     </div>
                 </article>
@@ -85,9 +85,7 @@ export default {
             localStorage.setItem('MessageId', m);
             router.replace("http://localhost:8080/api/comment")
         },
-        toAllComments() {
-            router.replace("http://localhost:8080/api/AllComments")
-        },
+     
         toAllUsers() {
             router.replace("http://localhost:8080/api/AllUsers")
         }
