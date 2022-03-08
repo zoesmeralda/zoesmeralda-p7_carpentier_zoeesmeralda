@@ -12,7 +12,7 @@
                         </div>
                         <div class="card-body">
                             <div class="text-center">
-                                <p id="membre">Membre depuis le {{ creation }}</p>
+                                <p id="membre">Membre depuis le {{ dateCreation }}</p>
                             </div>
                             <div id="compteButton" class="text-center">
                                 <router-link v-if="isAdmin" to='/Admin'><button type="button" class="btn btn-dark btn-lg btn-block ">ESPACE ADMINISTRATEUR</button></router-link> 
@@ -68,7 +68,7 @@ export default {
             messages: [],
             id: "",                 
             name: "",               
-            creation: ""           
+            dateCreation: ""           
         }
     },
     created: function() {        
@@ -94,7 +94,7 @@ export default {
             console.log(res)
             self.id                 = res.data.id;
             self.name               = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
         })
         .catch((error)=> { console.log(error) 

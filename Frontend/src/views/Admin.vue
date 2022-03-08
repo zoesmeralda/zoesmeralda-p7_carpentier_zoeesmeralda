@@ -13,13 +13,13 @@
                     <article class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <div class="m-1"> Bienvenue {{ nameCurrentUser }} ! </div>
+                                <div class="m-1"> Bienvenue {{ nameUser }} ! </div>
                                 <button class="btn btn-dark btn-lg btn-block"  @click="localClear">Se déconnecter </button>
                             </div>
                         </div>
                         <div class="card-body text-center">
                             <div class="dropdown text-center">
-                                <p>Membre depuis le {{ creation }}</p>
+                                <p>Membre depuis le {{ dateCreation }}</p>
                             </div>
                             
                         
@@ -58,8 +58,8 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameCurrentUser: "",
-            creation: ""
+            nameUser: "",
+            dateCreation: ""
         }
     },
     created: function() {        
@@ -67,9 +67,9 @@ export default {
         let self        = this;  
         axios.get("http://localhost:3000/api/users/" + id, { headers: {"Authorization": "Bearer " + localStorage.getItem("token")} })
         .then(res => {  
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
-            self.nameCurrentUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);       
+            self.nameUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);       
         })
         .catch((error)=> { console.log(error) 
         });    

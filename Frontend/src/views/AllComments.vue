@@ -18,7 +18,7 @@
                         </div>
                         <div class="card-body text-center">
                             <div class="dropdown text-center">
-                                <p>Membre depuis le {{ creation }}</p>
+                                <p>Membre depuis le {{ dateCreation }}</p>
                             </div>
                             
                         </div>
@@ -59,7 +59,7 @@ export default {
             isAdmin: false,
             messages: [],
             nameUser: "",
-            creation: ""
+            dateCreation: ""
         }
     },
     created: function() {        
@@ -80,7 +80,7 @@ export default {
         })      
         axios.get("http://localhost:3000/api/users/" + id, { headers: {"Authorization": "Bearer " + localStorage.getItem("token")} })
         .then(res => {  
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
             self.nameUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);       
         })

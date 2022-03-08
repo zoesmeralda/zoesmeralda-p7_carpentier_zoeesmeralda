@@ -23,7 +23,7 @@
 
  <router-link to="/Admin"> <button v-if="isAdmin" class="btn btn-dark btn-lg btn-block"> Espace Administrateur </button></router-link>
           <div class="opacity-75 mb-4">
-            Membre depuis le {{ creation }}
+            Membre depuis le {{ dateCreation }}
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default {
         return {
             isAdmin: false,
             nameUser: "",
-            creation: "",
+            dateCreation: "",
             id: ""
         }
     },
@@ -73,7 +73,7 @@ export default {
         let self        = this;
         axios.get("http://localhost:3000/api/users/" + id, { headers: {"Authorization": "Bearer " + localStorage.getItem("token")} })
         .then(res => {  
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
             self.nameUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);
             self.id                 = res.data.id     

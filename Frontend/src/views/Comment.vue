@@ -37,7 +37,7 @@
                 <div class="card-header bg-light d-flex align-items-center justify-content-between m-0 p-1">
                     <span class=" text-dark text-bold  p-1" > 
                         Posté par {{ messageUserName }}
-                        le {{ creation }}
+                        le {{ dateCreation }}
                     </span>
                     <div class="badge bg-dark text-wrap text-white p-2" style="width: 6rem;">
                         ref # {{ messageId}}
@@ -93,7 +93,7 @@ export default {
         return {
             isAdmin: false,
             comments: [],
-            creation: "",
+            dateCreation: "",
             messageUserName: "",
             messageUserId: "",
             message: "",
@@ -110,7 +110,7 @@ export default {
         axios.get("http://localhost:3000/api/messages/" + MessageId,  { headers: {"Authorization": "Bearer " + localStorage.getItem("token")} })
         .then((res) => {
             console.log(res)
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.messageUserName    = res.data.userName;
             self.messageUserId      = res.data.userId;
             self.message            = res.data.message;

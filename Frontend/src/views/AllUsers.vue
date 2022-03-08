@@ -12,13 +12,13 @@
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
                         <div class="card-header">
                             <div class="row justify-content-around">
-                                <p class="m-1"> Bonjour {{ nameCurrentUser }} ! </p>
+                                <p class="m-1"> Bonjour {{ nameUser }} ! </p>
                                 <button @click="localClear"> Se déconnecter </button>
                             </div>
                         </div>
                         <div class="card-body text-center">
                             <div class="dropdown text-center">
-                                <p>Membre depuis le {{ creation }}</p>
+                                <p>Membre depuis le {{ dateCreation }}</p>
                             </div>
                         
                         </div>
@@ -55,8 +55,8 @@ export default {
     data() {
         return {
             isAdmin: false,
-            nameCurrentUser: "",
-            creation: "",
+            nameUser: "",
+            dateCreation: "",
             users: []
         }
     },
@@ -66,9 +66,9 @@ export default {
 
         axios.get("http://localhost:3000/api/users/" + id , { headers: {"Authorization": "Bearer " + localStorage.getItem("token")} })
         .then(res => {  
-            self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
+            self.dateCreation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
-            self.nameCurrentUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);       
+            self.nameUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);       
         })
         .catch((error)=> { console.log(error) 
         });
