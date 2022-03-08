@@ -1,3 +1,4 @@
+//Model sequelize de commentaire
 const { Model } = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
