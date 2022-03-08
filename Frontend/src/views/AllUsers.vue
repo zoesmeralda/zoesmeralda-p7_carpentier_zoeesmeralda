@@ -26,15 +26,7 @@
                 </article> 
               
                 <sub class="col col-md-8">
-                    <h2 class="text-white text-center m-5 ">
-                       UTILISATEURS
-                    </h2>
-                    <div class="badge btn-primary p-3 badgeList">
-                        <span class="spanBadge">Nom</span>  
-                        <span class="spanBadge">Email</span>
-                        <span class="spanBadge">Depuis le </span> 
-                        <span class="spanBadge">Supprimer</span> 
-                    </div>
+                    
                     <div v-for="i in users" :key="i">   
                         <div class="badge btn-primary p-3 badgeList">
                             <span class="spanBadge"> {{ i.userName.charAt(0).toUpperCase() + i.userName.slice(1) }} </span> 
