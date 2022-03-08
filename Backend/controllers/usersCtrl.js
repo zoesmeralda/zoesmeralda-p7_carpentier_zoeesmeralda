@@ -4,7 +4,7 @@ const Message   = db.messages
 const Comment   = db.comments
 const { Op } = require("sequelize");
 
-
+//trouver un utilisateur
 exports.findOneUser = (req, res, next) => {
     const userData = {}
     User.findOne({ where: { id: req.params.id }})
@@ -30,7 +30,7 @@ exports.findOneUser = (req, res, next) => {
     })
     .catch(error => res.status(404).json({ error }))
 }
-
+//liste de tous les utilisateurs
 exports.findAllUsers = (req, res, next) => {
     User.findAll({
         where: {id: { [Op.gt]: 0 }} 
@@ -44,7 +44,7 @@ exports.findAllUsers = (req, res, next) => {
 }
 
 
-
+//supprimer un utilisateur si Admin
 exports.deleteOneUser = (req, res, next) => {
     
     
@@ -60,7 +60,7 @@ exports.deleteOneUser = (req, res, next) => {
         res.status(401).json({message : " unauthorized "})
     }
 }
-
+//Supprimer son propre compte
 exports.deleteMyAccount = (req, res, next) => {
     
     Comment.destroy({ where: { UserId: req.params.id }})

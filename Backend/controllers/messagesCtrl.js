@@ -4,7 +4,7 @@ const User      = db.users
 const Comment   = db.comments
 
 
-
+//creer un post et ensuite l'enregistrer pour recuperer les infos dans la db
 exports.createMessage = (req, res, next) => {
 
    
@@ -26,7 +26,7 @@ exports.createMessage = (req, res, next) => {
 
 };
 
-
+//trouver tous les posts
 
 exports.findAllMessages = (req, res, next) => {
     Message.findAll({
@@ -52,7 +52,7 @@ exports.findAllMessages = (req, res, next) => {
     })
     .catch(error => res.status(400).json({ error }))
 }
-
+//trouver un post
 exports.findOneMessage = (req, res, next) => {
     const oneMessage = {}
     Message.findOne({ 
@@ -76,7 +76,7 @@ exports.findOneMessage = (req, res, next) => {
     })
     .catch(error => res.status(404).json({ error }))
 };
-
+//trouver tous les posts d'un utilisateur
 exports.findAllMessagesForOne = (req, res, next) => {
     let list = ""
     Message.findAll({ 
@@ -89,7 +89,7 @@ exports.findAllMessagesForOne = (req, res, next) => {
     .catch((error) => { res.status(404).json({ error })})
 };
 
-// DELETE
+// supprimer un post 
 
 exports.deleteMessage = (req, res, next) => {
 

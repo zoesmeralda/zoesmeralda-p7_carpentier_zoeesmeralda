@@ -2,7 +2,7 @@ const db        = require("../models");  // modèles sequelize
 const Comment   = db.comments;              
 const User      = db.users;
 
-
+//creer un commentaire et l'enregistrer
 exports.createComment = (req, res, next) => {
    
     const comment = new Comment(
@@ -19,7 +19,7 @@ exports.createComment = (req, res, next) => {
 };
 
 
-
+//trouver un commentaire
 exports.findOneComment = (req, res, next) => {
     Comment.findAll({ 
         where: { 
@@ -34,14 +34,14 @@ exports.findOneComment = (req, res, next) => {
     .then(comment => { res.status(200).json(comment) })
     .catch(error => res.status(404).json({ error }))
 };
-
+//trouver tous les commentaires
 exports.findAllComments = (req, res, next) => {
     Comment.findAll()
     .then(comments => { res.status(200).json(comments) })
     .catch(error => res.status(400).json({ error }))
 };
 
-// DELETE
+// supprimer un commentaire
 
 exports.deleteComment = (req, res, next) => {
     
