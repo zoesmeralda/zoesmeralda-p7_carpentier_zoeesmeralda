@@ -18,7 +18,7 @@
        
 
         <div class="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
-          <h4 class="font-weight-bold my-4">Bienvenue {{ nameCurrentUser }} !</h4>
+          <h4 class="font-weight-bold my-4">Bienvenue {{ nameUser }} !</h4>
 <button @click="localClear"> Se déconnecter </button>
 
  <router-link to="/Admin"> <button v-if="isAdmin" class="btn btn-dark btn-lg btn-block"> Espace Administrateur </button></router-link>
@@ -58,12 +58,12 @@ import router from "../router";
 import "../main.css";
 
 export default {
-    name: "Compte",
+    name: "Profil",
     
     data() {
         return {
             isAdmin: false,
-            nameCurrentUser: "",
+            nameUser: "",
             creation: "",
             id: ""
         }
@@ -75,7 +75,7 @@ export default {
         .then(res => {  
             self.creation           = res.data.createdAt.slice(0,10).split("-").reverse().join(".");
             self.isAdmin            = res.data.isAdmin;
-            self.nameCurrentUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);
+            self.nameUser    = res.data.userName.charAt(0).toUpperCase() + res.data.userName.slice(1);
             self.id                 = res.data.id     
         })
         .catch((error)=> { console.log(error) 
