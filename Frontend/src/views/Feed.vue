@@ -1,10 +1,6 @@
 <template>
     <main class="container">    
         <div class="col-12">
-            <div class="col-12 ">
-                <h1 v-if= 'this.messages.length !== 0'><b-button disabled size="lg" variant="primary"> Dernières Publications</b-button></h1>   
-             
-            </div>
             <section id="filPrincipal" class="row">
                 <article class="col-12 col-md-4">
                     <div class="card bg-light my-3 class=center-block" style="float:none;">
