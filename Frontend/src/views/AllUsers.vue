@@ -3,7 +3,7 @@
         <div class="col-12">
            
             <div class="col-12">
-               <router-link v-if="isAdmin" to='/Admin'><h1 class="my-2 btn btn-block btn-danger font-weight-bold">Administration du site</h1></router-link>
+               <router-link v-if="isAdmin" to='/Admin'><h1 class="btn btn-dark btn-lg btn-block">Administration du site</h1></router-link>
                <Home></Home>
             </div>
             <section id="filPrincipal" class="row">
@@ -20,10 +20,7 @@
                             <div class="dropdown text-center">
                                 <p>Membre depuis le {{ creation }}</p>
                             </div>
-                            <div>
-                                <router-link v-if="isAdmin" to='/Admin'><button v-if="isAdmin" type="button"  class=" btn btn-danger mx-auto rounded p-2">ADMINISTRATEUR</button></router-link> 
-                                
-                            </div>
+                        
                         </div>
                     </div> 
                 </article> 
