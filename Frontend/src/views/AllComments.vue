@@ -27,22 +27,13 @@
                 </sub>   
                  
                 <sub class="col col-md-8">
-                    <h2 class="text-black text-center m-5 ">
-                        Posts
-                    </h2>
-                    <div class="badge btn-primary p-3 badgeList" >
-                            <span class="spanBadge">Date</span>  
-                            <span class="spanBadge">User</span>
-                            <span class="spanBadge">Post</span> 
-                            <span class="spanBadge">Id</span> 
-                            <span class="spanBadge">Voir</span> 
-                    </div>
+                   
                     <div v-for="i in messages" :key="i">   
                         <div class="badge btn-primary p-3 badgeList">
                             <span class="spanBadge"> Le {{ i.createdAt.slice(0,10).split("-").reverse().join(".")}} </span>  
                             <span class="spanBadge"> {{ i.userName.charAt(0).toUpperCase() + i.userName.slice(1) }} </span> 
                             <span class="spanBadge"> {{ i.message.slice(0,10) }}...</span> 
-                            <span class="spanBadge"> ref #{{ i.id }}</span> 
+                            <span class="spanBadge"> publication #{{ i.id }}</span> 
                             <span class="spanBadge"> <button class="rounded" @click="seeOnePost( i.id )"> Voir </button> </span> 
                         </div>
                     </div>

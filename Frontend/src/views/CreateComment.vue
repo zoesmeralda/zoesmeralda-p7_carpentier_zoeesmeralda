@@ -48,7 +48,7 @@ export default {
         },
         send() {
 
-            if (!this.newComment || !localStorage.getItem("userId") || !localStorage.getItem("MessageId" || this.newComment.lemgth > 1500)) {
+            if (!this.newComment || !localStorage.getItem("userId") || !localStorage.getItem("MessageId" || this.newComment.length > 1500)) {
                 this.isInvalid = true;
             } else {
 
